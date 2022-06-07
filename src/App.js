@@ -1,11 +1,12 @@
+// import components
+import Header from'./components/Header';
+
 // import styles
 import './styles/App.css';
 import './styles/header.css';
 import './styles/sidebar.css';
 import './styles/content.css';
 
-// import images
-import img_logo from './img/icons/fox.png';
 
 function App() {
   return (
@@ -16,20 +17,6 @@ function App() {
     </div>
     
   );
-}
-
-const Header = () => {
-  return(
-  <div className="Header">
-  <a className="header_button" id="button_logo" role="button" href="">
-    <img src={img_logo} alt="This is logo" /> 
-  </a>  
-  <nav className="buttons_nav">
-    <a className="header_button" id="button_home" role="button" href="">Home</a>
-    <a className="header_button" id="button_news" role="button" href="">News</a> 
-    <a className="header_login" role="button" href="">Login</a>
-  </nav>
-</div>);
 }
 
 const Sidebar = () => {
