@@ -1,6 +1,8 @@
 
 // import images
-import img_logo from '../img/icons/fox.png';
+import img_logo from '../../img/icons/fox.png';
+import HeaderLink from './Link';
+import BtnLogin from './BtnLogin';
 
 const Header = () => {
     return(
@@ -9,9 +11,9 @@ const Header = () => {
       <img src={img_logo} alt="This is logo" /> 
     </a>  
     <nav className="buttons_nav">
-      <a className="header_button" id="button_home" role="button" href="">Home</a>
-      <a className="header_button" id="button_news" role="button" href="">News</a> 
-      <a className="header_login" role="button" href="">Login</a>
+      <HeaderLink name="Home" href="HomeTest" />
+      <HeaderLink name="News" href="NewsTest" />
+      <BtnLogin name="Login" href="LoginTest" />
     </nav>
   </div>);
   }
