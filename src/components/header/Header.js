@@ -1,21 +1,21 @@
-
-// import images
-import img_logo from '../../img/icons/fox.png';
-import HeaderLink from './Link';
-import BtnLogin from './BtnLogin';
+// import components
+import HeaderLink from "./Link";
+import BtnLogin from "./BtnLogin";
+import Logo from "../utility/logo";
 
 const Header = () => {
-    return(
+  return (
     <div className="Header">
-    <a className="header_button" id="button_logo" role="button" href="">
-      <img src={img_logo} alt="This is logo" /> 
-    </a>  
-    <nav className="buttons_nav">
-      <HeaderLink name="Home" href="HomeTest" />
-      <HeaderLink name="News" href="NewsTest" />
-      <BtnLogin name="Login" href="LoginTest" />
-    </nav>
-  </div>);
-  }
+      <a className="header_button" id="button_logo" role="button" href="">
+        <Logo />
+      </a>
+      <nav className="buttons_nav">
+        <HeaderLink name="Home" href="/home" />
+        <HeaderLink name="News" href="/news" />
+        <BtnLogin name="Login" href="/login" />
+      </nav>
+    </div>
+  );
+};
 
-  export default Header;
+export default Header;
