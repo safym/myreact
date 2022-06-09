@@ -1,8 +1,7 @@
 .Sidebar{
     grid-area: n;
 
-    background-color: rgb(44, 44, 44);
-    border-right: 2px solid black;
+    background-color: rgb(27, 27, 27);
   }
 
 .Sidebar_message{
@@ -18,13 +17,10 @@
 
 #Sidebar_messageDate{
     height: 170px;
-
-
+    
     background-color: rgba(243, 112, 255, 0.2);
     border: 2px solid rgba(243, 112, 255, 0.712);
     color: rgba(243, 112, 255, 0.712);
-
-
 }
 
 #Sidebar_messageWeather{

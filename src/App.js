@@ -13,6 +13,7 @@ import "./styles/sidebar.css";
 import "./styles/content.css";
 import "./styles/home.css";
 import "./styles/login.css";
+import "./styles/profile.css";
 
 // import modules
 import { BrowserRouter, Routes, Route } from "react-router-dom";
