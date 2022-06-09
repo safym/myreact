@@ -1,13 +1,13 @@
 // import components
 import InputLoginPassword from "./inputLoginPassword";
-import ButtonSingin from "./buttonSingin";
+import ButtonSignin from "./buttonSignin";
 
 const ComponentsLogin = () => {
   return (
     <div className="LoginPassword">
       <InputLoginPassword type="Login" />
       <InputLoginPassword type="Password" />
-      <ButtonSingin />
+      <ButtonSignin />
     </div>
   );
 };

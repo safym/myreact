@@ -3,6 +3,7 @@ import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
 import Content from "./components/content/Content";
 import HomePage from "./components/home/home";
+import Profile from "./components/profile/profile";
 import Login from "./components/login/loginPage";
 
 // import styles
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/home" element={<HomePage />} />
             <Route path="/news" element={<Content />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
           </Routes>
           {/* <Content />

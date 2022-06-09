@@ -3,10 +3,10 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { purple } from "@mui/material/colors";
 
-const ButtonSingin = () => {
+const ButtonSignin = () => {
   return (
     <ColorButton variant="contained" size="large" fullWidth>
-      Sing in
+      Sign in
     </ColorButton>
   );
 };
@@ -19,4 +19,4 @@ const ColorButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-export default ButtonSingin;
+export default ButtonSignin;
