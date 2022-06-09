@@ -3,7 +3,7 @@ import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
 import Content from "./components/content/Content";
 import HomePage from "./components/home/home";
-import Login from "./components/login/login";
+import Login from "./components/login/loginPage";
 
 // import styles
 import "./styles/App.css";
@@ -24,9 +24,9 @@ function App() {
         <Sidebar />
         <div className="WrapperContent">
           <Routes>
-            <Route path='/home' element={<HomePage />} />
-            <Route path='/news' element={<Content />} />
-            <Route path='/login' element={<Login />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/news" element={<Content />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
           {/* <Content />
           <HomePage /> */}

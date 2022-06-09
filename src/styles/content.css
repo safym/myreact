@@ -15,4 +15,10 @@
     font-size: 20px;
 }
 
+.WrapperContent {
+
+    display: flex;
+    justify-content: center;
+}
+
  

@@ -1,12 +1,12 @@
-import Message from'./Message';
+import Message from "./Message";
 
 const Sidebar = () => {
-    return(
+  return (
     <div className="Sidebar">
       <Message type="Date" />
-      <Message type="Weather" />    
+      <Message type="Weather" />
+    </div>
+  );
+};
 
-  </div>);
-  }
-
-  export default Sidebar;
+export default Sidebar;
