@@ -26,7 +26,6 @@ const Profile = () => {
             label="New post" 
             multiline 
             id="InputPost" 
-            // rows={5}
             minRows={5}
             maxRows={12}
             fullWidth 
