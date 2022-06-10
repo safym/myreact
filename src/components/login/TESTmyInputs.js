@@ -1,24 +1,7 @@
-// import framework components
-import { styled } from "@mui/material/styles";
-import TextField from "@mui/material/TextField";
+// import components
+import { Component } from "react";
 
-const CssTextField = styled(TextField)({
-  "& label.Mui-focused": {
-    color: "#000000",
-  },
-
-  "& .MuiOutlinedInput-root": {
-    "& fieldset": {
-      borderColor: "#000000",
-    },
-
-    "&.Mui-focused fieldset": {
-      borderColor: "#000000",
-    },
-  },
-});
-
-class MyInput extends TextField {
+class MyInput extends Component{
   constructor(props) {
     super(props);
 
@@ -27,7 +10,6 @@ class MyInput extends TextField {
       this.class = "username";
       this.id = this.props.name;
       this.label = this.props.name;
-      this.value = this.state.login;
     }
 
     else if (this.props.name == "password") {
@@ -35,7 +17,6 @@ class MyInput extends TextField {
       this.class = "password"
       this.id = this.props.name;
       this.label = this.props.name;
-      this.value = this.state.password;
     }
 
     this.name = this.props.name;
@@ -44,13 +25,13 @@ class MyInput extends TextField {
   render() {
     return (
       <div className={this.class}>
-          <CssTextField 
+          <input
             label={this.label} 
             type={this.type} 
             id={this.id} 
-            margin="dense" 
+            className='styledInput'
             name={this.name} 
-            onChange={this.handleChange} 
+            placeholder={this.label}
           />
         </div>
     );

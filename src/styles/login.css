@@ -10,11 +10,13 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-
 }
 
 
 .LoginPassword {
+    display: flex;
+    flex-direction: column;
+
     padding: 40px;
 
     background-color: #ae7cd8;

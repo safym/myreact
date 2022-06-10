@@ -35,7 +35,7 @@
 
 .header_button {
 
-  height: 60px;
+  margin: 15px;
   color: white;
 }
 
@@ -54,8 +54,9 @@
 }
 
 #button_logo {
+  height: 70%;
   float: left;
-  padding: 10px;
+  margin: 10px;
 }
 
 

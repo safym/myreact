@@ -14,6 +14,8 @@ import "./styles/content.css";
 import "./styles/home.css";
 import "./styles/login.css";
 import "./styles/profile.css";
+import "./styles/input.css";
+import "./styles/button.css";
 
 // import modules
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -28,11 +30,12 @@ function App() {
           <Routes>
             <Route path="/home" element={<HomePage />} />
             <Route path="/news" element={<Content />} />
+
             <Route path="/profile" element={<Profile />} />
+            
             <Route path="/login" element={<Login />} />
           </Routes>
-          {/* <Content />
-          <HomePage /> */}
+          
         </div>
       </div>
     </BrowserRouter>
