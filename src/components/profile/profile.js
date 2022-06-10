@@ -5,6 +5,7 @@ import img_user from '../../img/icons/user.svg'
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import TextField from '@mui/material/TextField';
+import Alert from '@mui/material/Alert';
 
 const Profile = () => {
   return (
@@ -21,6 +22,14 @@ const Profile = () => {
 
       <div className="NewPost">
         
+        <CssTextField 
+            label="Title" 
+            id="InputTitle" 
+            Rows={1}
+            maxRows={1}
+            fullWidth 
+            margin="dense" 
+        />
 
         <CssTextField 
             label="New post" 
@@ -31,6 +40,12 @@ const Profile = () => {
             fullWidth 
             margin="dense" 
         />
+
+        <Alert severity="success" color="success">
+        Successfully published!
+        </Alert>
+
+
 
         <div className='ButtonPublish'>
             <ColorButton variant="contained" size="large">

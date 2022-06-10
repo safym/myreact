@@ -18,6 +18,43 @@ const CssTextField = styled(TextField)({
   },
 });
 
-styled(TextField)({});
+class MyInput extends TextField {
+  constructor(props) {
+    super(props);
 
-export default CssTextField;
+    if (this.props.name == "login") {
+      this.type = "text";
+      this.class = "username";
+      this.id = this.props.name;
+      this.label = this.props.name;
+      this.value = this.state.login;
+    }
+
+    else if (this.props.name == "password") {
+      this.type = "password";
+      this.class = "password"
+      this.id = this.props.name;
+      this.label = this.props.name;
+      this.value = this.state.password;
+    }
+
+    this.name = this.props.name;
+  }
+
+  render() {
+    return (
+      <div className={this.class}>
+          <CssTextField 
+            label={this.label} 
+            type={this.type} 
+            id={this.id} 
+            margin="dense" 
+            name={this.name} 
+            onChange={this.handleChange} 
+          />
+        </div>
+    );
+  }
+}
+
+export default MyInput;
