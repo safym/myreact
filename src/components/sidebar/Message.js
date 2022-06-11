@@ -1,7 +1,7 @@
-function Message(prop) {
-  var Messageid = "Sidebar_message" + prop.type;
+function Message(props) {
+  var Messageid = "Sidebar_message" + props.type;
 
-  if (prop.type == "Date") {
+  if (props.type == "Date") {
     return (
       <div className="Sidebar_message" id={Messageid}>
         <p>6 June 2022</p>
@@ -10,7 +10,7 @@ function Message(prop) {
     );
   }
 
-  if (prop.type == "Weather") {
+  if (props.type == "Weather") {
     return (
       <div className="Sidebar_message" id={Messageid}>
         <p>⛅ +22 C°</p>
@@ -19,7 +19,7 @@ function Message(prop) {
   }
   return (
     <div className="Sidebar_message" id={Messageid}>
-      <p>Undefind</p>
+      <p>Undefined</p>
     </div>
   );
 }

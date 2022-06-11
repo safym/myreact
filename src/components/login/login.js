@@ -3,27 +3,34 @@ import MyButton from "./TESTmyButton";
 import { Component, useState } from "react";
 import getUsers from "../../misc/accounts";
 
-class ComponentsLogin extends Component {
-  state = {
-    login: "",
-    password: ""
-  };
+const ComponentsLogin = (props) =>  {
 
-  handleChange = (event) => {
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+
+  // state = {
+  //   login: "",
+  //   password: ""
+  // };
+
+  const handleChange = (event) => {
     const input = event.target;
     const value = input.value;
 
-    console.log(value);
-
-    this.setState({ [input.name]: value }, () => console.log(this.state.login));
+    if (input.name == "login") {
+      setLogin(value);
+    }
+    if (input.name == "password") {
+      setPassword(value);
+    }
 
   }
 
-  checkAccount = () => {
+  const checkAccount = () => {
     var users= getUsers();
     
     for (let entry of users) {
-      if (this.state.login == entry[0] && this.state.password == entry[1]) {
+      if (login == entry[0] && password == entry[1]) {
 
         return true;
       }
@@ -32,27 +39,27 @@ class ComponentsLogin extends Component {
     return false; 
   };
 
-  handleFormSubmit = (event) => {
+  const handleFormSubmit = (event) => {
     event.preventDefault();
-    if (this.checkAccount()) {
-      const { login, password } = this.state;
+    if (checkAccount()) {
+      
       localStorage.setItem('login', login);
       localStorage.setItem('password', password);
       localStorage.setItem('authorized', 'true');
+
+      props.callback(checkAccount());
     }
   };
-
-  render() {
   
     return (
-      <form className="LoginPassword" onSubmit={this.handleFormSubmit}>
+      <form className="LoginPassword" onSubmit={handleFormSubmit}>
         <input 
           className='styledInput' 
           id="login"
           placeholder='Login' 
           name='login' 
-          value={this.state.login} 
-          onChange={this.handleChange} 
+          value={login} 
+          onChange={handleChange} 
         />
 
         <input 
@@ -61,8 +68,8 @@ class ComponentsLogin extends Component {
           name='password' 
           type='password'
           placeholder='Password'
-          value={this.state.password} 
-          onChange={this.handleChange} 
+          value={password} 
+          onChange={handleChange} 
         />
         
         <button className='myButton' type="submit">
@@ -70,7 +77,7 @@ class ComponentsLogin extends Component {
         </button>
       </form>
     );
-  }
+
 }
 
 export default ComponentsLogin;

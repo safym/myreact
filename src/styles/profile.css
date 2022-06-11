@@ -59,3 +59,9 @@
 #buttonPublish {
     /* width: 100px; */
 }
+
+.unAuthorized {
+    color:#ae7cd8;
+    padding-top: 70%;
+
+}

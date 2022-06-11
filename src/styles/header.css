@@ -34,7 +34,8 @@
   text-decoration: none;
 }
 
-#button_login {
+#buttonSignIn,
+#buttonSignOut {
   border-radius: 20px;
   background-color: #ae7cd8;
 }
@@ -57,6 +58,7 @@
   color: #ae7cd8;
 }
 
-#button_login:hover {
+#buttonSignIn:hover,
+#buttonSignOut:hover {
   color: #000000;
 }

@@ -4,7 +4,15 @@ import img_user from '../../img/icons/user.svg'
 
 
 
-const Profile = () => {
+const Profile = (props) => {
+  if (!props.auth) {
+    return (
+      <div className="Profile">
+        <h1 className="unAuthorized" >Sign in to see your profile!</h1>
+      </div>
+    )
+  }
+
   return (
     <div className="Profile">
       <div className="AboutProfile">

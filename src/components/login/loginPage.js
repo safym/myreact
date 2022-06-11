@@ -2,11 +2,12 @@
 import ComponentsLogin from "./login"
 import Logo from "../utility/logo";
 
-const LoginPage = () => {
+const LoginPage = (props) => {
+
   return (
     <div className="login">
         <Logo />
-        <ComponentsLogin />
+        <ComponentsLogin callback={props.callback}/>
     </div>
   );
 };

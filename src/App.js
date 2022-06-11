@@ -19,27 +19,40 @@ import "./styles/button.css";
 
 // import modules
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState } from 'react';
+
+function checkLocalStorage() {
+  var isAuthorized = localStorage.getItem('authorized') === 'true';
+  return isAuthorized;
+}
 
 function App() {
+
+  const [authorized, setAuthorized] = useState(checkLocalStorage());
+
+  const authorizedCallback = (LoginData) => {
+    setAuthorized(LoginData);
+    console.log('ghbdtn bp ФЗЗ')
+  }
+
   return (
     <BrowserRouter>
       <div className="Wrapper">
-        <Header />
+        <Header auth={authorized} callback={authorizedCallback} />
         <Sidebar />
         <div className="WrapperContent">
           <Routes>
             <Route path="/home" element={<HomePage />} />
             <Route path="/news" element={<Content />} />
-
-            <Route path="/profile" element={<Profile />} />
-            
-            <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile auth={authorized}/>} />
+            <Route path="/login" element={<Login callback={authorizedCallback}/>} />
           </Routes>
-          
         </div>
       </div>
     </BrowserRouter>
   );
 }
+
+
 
 export default App;
