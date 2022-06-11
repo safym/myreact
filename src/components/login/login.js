@@ -33,7 +33,7 @@ class ComponentsLogin extends Component {
   };
 
   handleFormSubmit = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     if (this.checkAccount()) {
       const { login, password } = this.state;
       localStorage.setItem('login', login);
@@ -48,6 +48,7 @@ class ComponentsLogin extends Component {
       <form className="LoginPassword" onSubmit={this.handleFormSubmit}>
         <input 
           className='styledInput' 
+          id="login"
           placeholder='Login' 
           name='login' 
           value={this.state.login} 
@@ -56,6 +57,7 @@ class ComponentsLogin extends Component {
 
         <input 
           className='styledInput'
+          id="password"
           name='password' 
           type='password'
           placeholder='Password'

@@ -1,10 +1,10 @@
 .styledInput {
-    width: 300px;
-    height: 50px;
+    width: 100%;
+    
 
     margin: 10px 0px 5px 0px;
     padding: 15px;
-   
+
     font-size: 20px;
     letter-spacing: 1px;
     
@@ -15,10 +15,19 @@
     background:  #825ca1;
 }
 
+#login,
+#password,
+#TitleNewPost {
+    height: 50px;
+}
+
+#TextNewPost {
+    /* height: 400px; */
+}
+
 .styledInput::placeholder {
     color: #333333;
 }
-
 
 .styledInput:focus {
     outline: none;
