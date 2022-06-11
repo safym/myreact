@@ -56,12 +56,8 @@
     width: 100%;
 }
 
-#buttonPublish {
-    /* width: 100px; */
-}
-
-.unAuthorized {
+.authMessage {
     color:#ae7cd8;
-    padding-top: 70%;
-
+    height: 100vh;
+    padding-top: 20%;
 }

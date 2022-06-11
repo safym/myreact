@@ -7,9 +7,9 @@ import img_user from '../../img/icons/user.svg'
 const Profile = (props) => {
   if (!props.auth) {
     return (
-      <div className="Profile">
-        <h1 className="unAuthorized" >Sign in to see your profile!</h1>
-      </div>
+      // <div className="Profile">
+        <h1 className="authMessage" >Sign in to see your profile!</h1>
+      // </div>
     )
   }
 

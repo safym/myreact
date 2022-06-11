@@ -45,7 +45,7 @@ function App() {
             <Route path="/home" element={<HomePage />} />
             <Route path="/news" element={<Content />} />
             <Route path="/profile" element={<Profile auth={authorized}/>} />
-            <Route path="/login" element={<Login callback={authorizedCallback}/>} />
+            <Route path="/login" element={<Login auth={authorized} callback={authorizedCallback}/>} />
           </Routes>
         </div>
       </div>
