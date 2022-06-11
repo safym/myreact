@@ -1,6 +1,6 @@
 // import components
 import HeaderLink from "./Link";
-import BtnLogin from "./BtnLogin";
+import BtnSignInOut from "./BtnSignInOut";
 import Logo from "../utility/logo";
 
 const Header = () => {
@@ -9,14 +9,15 @@ const Header = () => {
 
   return (
     <div className="Header">
-      <a className="header_button" id="button_logo" role="button" href="">
+      <a id="button_logo" role="button" href="">
         <Logo />
       </a>
       <nav className="buttons_nav">
         <HeaderLink name="Home" href="/home" visible={true}/>
         <HeaderLink name="News" href="/news" visible={true}/>
         <HeaderLink name="Profile" href="/profile" visible={authorized}/>
-        <BtnLogin name="Login" href="/login" visible={!authorized}/>
+        <BtnSignInOut name="Sign in" href="/login" visible={!authorized}/>
+        <BtnSignInOut name="Sign out" href="/home" visible={authorized}/>
       </nav>
     </div>
   );

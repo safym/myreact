@@ -33,7 +33,7 @@ class ComponentsLogin extends Component {
   };
 
   handleFormSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     if (this.checkAccount()) {
       const { login, password } = this.state;
       localStorage.setItem('login', login);
