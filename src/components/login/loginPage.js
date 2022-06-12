@@ -1,13 +1,15 @@
 // import components
 import ComponentsLogin from "./login"
 import Logo from "../utility/logo";
+import {useNavigate} from "react-router-dom"
 
 const LoginPage = (props) => {
+  const history = useNavigate();
+  history('/profile');
+
   if (props.auth) {
     return (
-      // <div className="login">
         <h1 className="authMessage" >You're signed in!</h1>
-      // </div>
     )
   }
 

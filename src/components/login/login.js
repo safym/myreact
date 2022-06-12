@@ -30,7 +30,7 @@ const ComponentsLogin = (props) =>  {
     
     for (let entry of users) {
       if (login == entry[0] && password == entry[1]) {
-
+        
         return true;
       }
     }
