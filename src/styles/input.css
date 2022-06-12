@@ -8,11 +8,12 @@
     font-size: 20px;
     letter-spacing: 1px;
     
-    color: white;
+    color: #000000;
     border: none;
     border-radius: 20px;
 
-    background:  #825ca1;
+    transition-duration: 0.1s;
+    transition-property: color;
 }
 
 #login,
@@ -30,6 +31,5 @@
 }
 
 .styledInput:focus {
-    outline: none;
-    background:  #966ab9;
+    outline: 2px solid #844db1;
 }

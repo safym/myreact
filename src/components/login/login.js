@@ -7,13 +7,12 @@ const ComponentsLogin = (props) =>  {
 
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
+  const [coror, setCoror] = useState("#000000");
 
-  // state = {
-  //   login: "",
-  //   password: ""
-  // };
 
   const handleChange = (event) => {
+    setCoror("#000000");
+
     const input = event.target;
     const value = input.value;
 
@@ -36,6 +35,7 @@ const ComponentsLogin = (props) =>  {
       }
     }
 
+    setCoror("#ff646b");
     return false; 
   };
 
@@ -60,6 +60,7 @@ const ComponentsLogin = (props) =>  {
           name='login' 
           value={login} 
           onChange={handleChange} 
+          style={{ 'color': coror}}
         />
 
         <input 
@@ -70,6 +71,7 @@ const ComponentsLogin = (props) =>  {
           placeholder='Password'
           value={password} 
           onChange={handleChange} 
+          style={{ 'color': coror}}
         />
         
         <button className='myButton' type="submit">
