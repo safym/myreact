@@ -5,9 +5,10 @@ import {useNavigate} from "react-router-dom"
 
 const LoginPage = (props) => {
   const history = useNavigate();
-  history('/profile');
 
   if (props.auth) {
+    history('/profile');
+
     return (
         <h1 className="authMessage" >You're signed in!</h1>
     )
