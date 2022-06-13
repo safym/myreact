@@ -1,20 +1,46 @@
+
 // import components
 import img_user from '../../img/icons/user.svg'
-// import MyButton from "/TESTmyButton";
-
-
+import { useState } from "react";
 
 const Profile = (props) => {
+  const [newsTitle, setNewsTitle] = useState("");
+  const [newsText, setNewsText] = useState("");
+
   if (!props.auth) {
     return (
-      // <div className="Profile">
         <h1 className="authMessage" >Sign in to see your profile!</h1>
-      // </div>
     )
   }
 
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+
+    if (newsTitle.length & newsText.length) {
+      
+      localStorage.setItem('newsTitle', newsTitle);
+      localStorage.setItem('newsText', newsText);
+
+      // props.callback(     );
+    }
+  };
+
+  const handleChange = (event) => {
+   
+    const input = event.target;
+    const value = input.value;
+
+    if (input.name == "title") {
+      setNewsTitle(value);
+    }
+    if (input.name == "text") {
+      setNewsText(value);
+    }
+
+  }
+
   return (
-    <div className="Profile">
+    <form className="Profile" onSubmit={handleFormSubmit}>
       <div className="AboutProfile">
             <img src={img_user} alt="This is logo" /> 
             <div className='UserInfo'>
@@ -30,14 +56,16 @@ const Profile = (props) => {
           className='styledInput' 
           id="TitleNewPost"
           placeholder='Title' 
-          name='login' 
+          name='title'
+          onChange={handleChange}  
         />
 
       <textarea 
           className='styledInput' 
           id="TextNewPost"
           placeholder='Text news' 
-          name='login' 
+          name='text'
+          onChange={handleChange}  
         />
         <div className='publish'>
         <button className='myButton' id='buttonPublish' type="submit">
@@ -48,7 +76,7 @@ const Profile = (props) => {
       </div>
 
 
-    </div>
+    </form>
   );
 };
   
