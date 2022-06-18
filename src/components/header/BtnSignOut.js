@@ -2,7 +2,9 @@
 import {NavLink} from "react-router-dom";
 
 function SignOut(callback) {
-    localStorage.clear();
+    localStorage.removeItem('authorized');
+    localStorage.removeItem('login');
+    localStorage.removeItem('password');
     callback(false);
 }
 
