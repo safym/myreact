@@ -18,7 +18,7 @@ import "./styles/input.css";
 import "./styles/button.css";
 
 // import modules
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import React, { useState } from 'react';
 
 function checkLocalStorage() {
@@ -32,7 +32,6 @@ function App() {
 
   const authorizedCallback = (LoginData) => {
     setAuthorized(LoginData);
-    console.log('ghbdtn bp ФЗЗ')
   }
 
   return (
@@ -42,6 +41,7 @@ function App() {
         <Sidebar />
         <div className="WrapperContent">
           <Routes>
+            <Route path="/" element={ <Navigate to="/home"/> } />
             <Route path="/home" element={<HomePage />} />
             <Route path="/news" element={<Content />} />
             <Route path="/profile" element={<Profile auth={authorized}/>} />
