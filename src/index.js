@@ -5,6 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+if (!localStorage.getItem('news')) {
+  localStorage.setItem('news', JSON.stringify([]));
+  console.log(JSON.parse(localStorage.getItem('news')));
+}
+
 root.render(
   <React.StrictMode>
     <App />

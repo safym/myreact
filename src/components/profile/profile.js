@@ -17,16 +17,22 @@ const Profile = (props) => {
     event.preventDefault();
 
     if (newsTitle.length & newsText.length) {
-      
-      localStorage.setItem('newsTitle', newsTitle);
-      localStorage.setItem('newsText', newsText);
 
-      // props.callback(     );
+      var currentNews = JSON.parse(localStorage.getItem('news'))
+
+      currentNews.push({title: newsTitle, text: newsText});
+      localStorage.setItem('news', JSON.stringify(currentNews));
+
+      const newsTitleInput = document.getElementById('TitleNewPost');
+      const newsTextInput = document.getElementById('TextNewPost');
+
+      newsTitleInput.value = '';
+      newsTextInput.value = '';
     }
+
   };
 
   const handleChange = (event) => {
-   
     const input = event.target;
     const value = input.value;
 
@@ -79,6 +85,5 @@ const Profile = (props) => {
     </form>
   );
 };
-  
 
 export default Profile;
