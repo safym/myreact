@@ -1,11 +1,9 @@
 const News1 = () => {
     return(
     <div className="NewsContent">
-      <h1>First news</h1>
-      <p>Irure in eu et qui voluptate nulla commodo cillum enim. Minim nisi qui ipsum esse pariatur amet dolor. Cupidatat nulla dolor et minim ea Lorem laborum tempor aliqua fugiat ullamco exercitation cupidatat consectetur. Consectetur consequat laborum irure id ad non velit elit mollit exercitation. Occaecat eu occaecat officia est occaecat enim labore ullamco non reprehenderit mollit tempor ipsum. Id ullamco pariatur sit ea exercitation cillum amet ullamco esse exercitation ipsum sunt excepteur. Sunt ut aliqua minim ut ullamco et.
-      </p>
-      <p>Irure in eu et qui voluptate nulla commodo cillum enim. Minim nisi qui ipsum esse pariatur amet dolor. Cupidatat nulla dolor et minim ea Lorem laborum tempor aliqua fugiat ullamco exercitation cupidatat consectetur. Consectetur consequat laborum irure id ad non velit elit mollit exercitation. Occaecat eu occaecat officia est occaecat enim labore ullamco non reprehenderit mollit tempor ipsum. Id ullamco pariatur sit ea exercitation cillum amet ullamco esse exercitation ipsum sunt excepteur. Sunt ut aliqua minim ut ullamco et.
-      </p>
+      <h1>Первейшая новость!</h1>
+      <p>Приветик, добрый человечек! Рады видеть тебя на нашем уютненьком маленьком сайтике, недоступном для лишних глаз! Надеюсь, тебе понравится добавлять новости и логиниться на страницу под разными именами, это было не так то и просто осуществить :)</p>
+      <p>Сайтик работает простейшим образом, и мы думаем, что тебе будет очень легко в нем разобраться! А если вдруг ты найдешь какую-нибудь нехорошую ошибочку или у тебя будут предложения по развитию - можешь на многое не надеяться, но все равно создай issue на гитхабе - возможно, мы ее увидим и что-нибудь сделаем, а может и нет... в любом случае, good luck и have fun, как говорится!</p>
     </div>);
   }
 
