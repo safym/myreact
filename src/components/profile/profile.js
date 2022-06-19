@@ -16,7 +16,7 @@ const Profile = (props) => {
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    if (newsTitle.length & newsText.length) {
+    // if (newsTitle.length & newsText.length) {
 
       var currentNews = JSON.parse(localStorage.getItem('news'))
 
@@ -26,9 +26,11 @@ const Profile = (props) => {
       const newsTitleInput = document.getElementById('TitleNewPost');
       const newsTextInput = document.getElementById('TextNewPost');
 
-      newsTitleInput.value = '';
-      newsTextInput.value = '';
-    }
+      newsTitleInput.value = "";
+      setNewsTitle("");
+
+      newsTextInput.value = "";
+      setNewsText("");
 
   };
 
@@ -74,7 +76,7 @@ const Profile = (props) => {
           onChange={handleChange}  
         />
         <div className='publish'>
-        <button className='myButton' id='buttonPublish' type="submit">
+        <button disabled={!newsTitle.length || !newsText.length} className='myButton' id='buttonPublish' type="submit">
           Publish
         </button>
         </div>
