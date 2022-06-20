@@ -1,10 +1,10 @@
-import News1 from "./ContentNews";
+import FirstNews from "./ContentNews";
 
 const Content = () => {
   return (
     <div className="Content">
       <News />
-      <News1 />
+      <FirstNews />
     </div>
   );
 };
@@ -15,9 +15,10 @@ const News = () => {
 
   for (var i = currentNews.length-1; i >= 0; i--)  {
     final.push(
-      <div className="NewsContent">
+      <div key={currentNews[i].title} className="NewsContent">
         <h1>{currentNews[i].title}</h1>
         <p>{currentNews[i].text}</p>
+        <p className="metadata">Author: {currentNews[i].author}</p>
       </div>
     );
   }

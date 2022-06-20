@@ -1,8 +1,8 @@
-.Content{
+.Content {
     grid-area: c;
     color: white;
     background-color: rgb(36, 36, 36);
-  }
+}
 
 .NewsContent {
     margin: 20px;
@@ -11,14 +11,16 @@
     border-radius: 20px;
 }
 
-.Content p{
+.Content p {
     font-size: 20px;
 }
 
 .WrapperContent {
-
     display: flex;
     justify-content: center;
 }
 
- 
+.metadata {
+    margin-bottom: 0;
+    color: rgb(110, 110, 110);
+}

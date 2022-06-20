@@ -10,7 +10,7 @@ const LoginPage = (props) => {
     history('/profile');
 
     return (
-        <h1 className="authMessage" >You're signed in!</h1>
+        <h1 className="infoMessage" >You're signed in!</h1>
     )
   }
 

@@ -9,26 +9,24 @@ const Profile = (props) => {
 
   if (!props.auth) {
     return (
-        <h1 className="authMessage" >Sign in to see your profile!</h1>
+        <h1 className="infoMessage" >Sign in to see your profile!</h1>
     )
   }
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    // if (newsTitle.length & newsText.length) {
-
       var currentNews = JSON.parse(localStorage.getItem('news'))
+      var currentUser = localStorage.getItem("login");
 
-      currentNews.push({title: newsTitle, text: newsText});
+      currentNews.push({title: newsTitle, text: newsText, author: currentUser });
       localStorage.setItem('news', JSON.stringify(currentNews));
 
       const newsTitleInput = document.getElementById('TitleNewPost');
-      const newsTextInput = document.getElementById('TextNewPost');
-
       newsTitleInput.value = "";
       setNewsTitle("");
 
+      const newsTextInput = document.getElementById('TextNewPost');
       newsTextInput.value = "";
       setNewsText("");
 

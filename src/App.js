@@ -16,6 +16,7 @@ import "./styles/login.css";
 import "./styles/profile.css";
 import "./styles/input.css";
 import "./styles/button.css";
+import "./styles/extra.css";
 
 // import modules
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
