@@ -1,20 +1,17 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 * {
-  font-family: Consolas,monaco,monospace; 
+  font-family: Consolas, monaco, monospace;
 }
-
-
 
 .App {
   background-color: black;
-  
-  font-size: calc(10px + 2vmin);
-  
   margin: 0;
-
+  font-size: calc(10px + 2vmin);
 }
 
 html {
@@ -35,17 +32,14 @@ body {
 .Wrapper {
   margin: 0;
   display: grid;
-  
+
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 60px 100% ;
-  grid-template-areas: "h h"
-                       "n c";
+  grid-template-rows: 60px 100%;
+  grid-template-areas:  "h h"
+                        "n c";
 }
 
 .WrapperContent {
   margin: 0;
   background-color: rgb(36, 36, 36);
 }
-
-
-

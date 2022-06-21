@@ -9,7 +9,6 @@ const HomePage = () => {
         <div className="logo">
           <Logo />
         </div>
-
         <Article />
       </div>
     </div>

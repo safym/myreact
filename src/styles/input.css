@@ -1,7 +1,6 @@
 .styledInput {
     width: 100%;
     
-
     margin: 10px 0px 5px 0px;
     padding: 15px;
 
@@ -20,10 +19,6 @@
 #password,
 #TitleNewPost {
     height: 50px;
-}
-
-#TextNewPost {
-    /* height: 400px; */
 }
 
 .styledInput::placeholder {

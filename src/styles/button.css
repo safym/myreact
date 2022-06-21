@@ -6,7 +6,7 @@
 
   border: none;
   color: #ae7cd8;
-  
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -18,7 +18,7 @@
 }
 
 .myButton:focus {
-  outline: none;    
+  outline: none;
 }
 
 .myButton:hover {
@@ -29,10 +29,8 @@
 .myButton:disabled,
 .myButton:disabled:hover,
 .myButton[disabled],
-.myButton[disabled]:hover{
+.myButton[disabled]:hover {
   border: none;
   background-color: #c695ee;
   color: #666666;
 }
-  
-

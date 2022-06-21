@@ -1,12 +1,11 @@
-.Sidebar{
+.Sidebar {
     grid-area: n;
 
     background-color: rgb(27, 27, 27);
-  }
+}
 
-.Sidebar_message{
+.Sidebar_message {
     width: 90%;
-
     margin: 10px;
 
     border-radius: 10px;
@@ -15,16 +14,20 @@
     font-size: 30px;
 }
 
-#Sidebar_messageDate{
-    height: 170px;
+#Sidebar_messageDate {
+    height: 100px;
     
     background-color: rgba(243, 112, 255, 0.2);
     border: 2px solid rgba(243, 112, 255, 0.712);
     color: rgba(243, 112, 255, 0.712);
 }
 
-#Sidebar_messageWeather{
-    height: 100px;
+#Sidebar_messageTime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 130px;
 
     background-color:rgba(169, 138, 255, 0.2);
     border: 2px solid rgba(169, 138, 255, 0.746);

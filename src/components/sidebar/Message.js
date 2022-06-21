@@ -1,3 +1,4 @@
+import Date from "./Date";
 import Clock from "./Clock";
 
 function Message(props) {
@@ -6,14 +7,14 @@ function Message(props) {
   if (props.type == "Date") {
     return (
       <div className="Sidebar_message" id={Messageid}>
-        <Clock />
+        <Date />
       </div>
     );
   }
-  if (props.type == "Weather") {
+  if (props.type == "Time") {
     return (
       <div className="Sidebar_message" id={Messageid}>
-        <p>⛅ +22 C°</p>
+        <Clock />
       </div>
     );
   }

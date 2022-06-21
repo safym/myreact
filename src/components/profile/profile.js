@@ -1,6 +1,5 @@
-
 // import components
-import img_user from '../../img/icons/user.svg'
+import img_user from "../../img/icons/user.svg"
 import { useState } from "react";
 
 const Profile = (props) => {
@@ -9,26 +8,26 @@ const Profile = (props) => {
 
   if (!props.auth) {
     return (
-        <h1 className="infoMessage" >Sign in to see your profile!</h1>
+      <h1 className="infoMessage" >Sign in to see your profile!</h1>
     )
   }
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-      var currentNews = JSON.parse(localStorage.getItem('news'))
-      var currentUser = localStorage.getItem("login");
+    var currentNews = JSON.parse(localStorage.getItem("news"))
+    var currentUser = localStorage.getItem("login");
 
-      currentNews.push({title: newsTitle, text: newsText, author: currentUser });
-      localStorage.setItem('news', JSON.stringify(currentNews));
+    currentNews.push({ title: newsTitle, text: newsText, author: currentUser });
+    localStorage.setItem("news", JSON.stringify(currentNews));
 
-      const newsTitleInput = document.getElementById('TitleNewPost');
-      newsTitleInput.value = "";
-      setNewsTitle("");
+    const newsTitleInput = document.getElementById("TitleNewPost");
+    newsTitleInput.value = "";
+    setNewsTitle("");
 
-      const newsTextInput = document.getElementById('TextNewPost');
-      newsTextInput.value = "";
-      setNewsText("");
+    const newsTextInput = document.getElementById("TextNewPost");
+    newsTextInput.value = "";
+    setNewsText("");
 
   };
 
@@ -48,35 +47,35 @@ const Profile = (props) => {
   return (
     <form className="Profile" onSubmit={handleFormSubmit}>
       <div className="AboutProfile">
-            <img src={img_user} alt="This is logo" /> 
-            <div className='UserInfo'>
-                <h1>{localStorage.login}</h1>
-                <p>My name is {localStorage.login}! Hello!🍇</p>
-            </div>
+        <img src={img_user} alt="This is logo" />
+        <div className="UserInfo">
+          <h1>{localStorage.login}</h1>
+          <p>My name is {localStorage.login}! Hello!🍇</p>
+        </div>
 
       </div>
 
       <div className="NewPost">
-        
-      <input 
-          className='styledInput' 
+
+        <input
+          className="styledInput"
           id="TitleNewPost"
-          placeholder='Title' 
-          name='title'
-          onChange={handleChange}  
+          placeholder="Title"
+          name="title"
+          onChange={handleChange}
         />
 
-      <textarea 
-          className='styledInput' 
+        <textarea
+          className="styledInput"
           id="TextNewPost"
-          placeholder='Text news' 
-          name='text'
-          onChange={handleChange}  
+          placeholder="Text news"
+          name="text"
+          onChange={handleChange}
         />
-        <div className='publish'>
-        <button disabled={!newsTitle.length || !newsText.length} className='myButton' id='buttonPublish' type="submit">
-          Publish
-        </button>
+        <div className="publish">
+          <button disabled={!newsTitle.length || !newsText.length} className="myButton" id="buttonPublish" type="submit">
+            Publish
+          </button>
         </div>
 
       </div>

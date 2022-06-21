@@ -11,11 +11,11 @@ const Header = (props) => {
         <Logo />
       </a>
       <nav className="buttons_nav">
-        <HeaderLink name="Home" href="/home" visible={true}/>
-        <HeaderLink name="News" href="/news" visible={true}/>
-        <HeaderLink name="Profile" href="/profile" visible={props.auth}/>
-        <BtnSignIn name="Sign in" href="/login" visible={!props.auth}/>
-        <BtnSignOut name="Sign out" href="/home" callback={props.callback} visible={props.auth}/>
+        <HeaderLink name="Home" href="/home" visible={true} />
+        <HeaderLink name="News" href="/news" visible={true} />
+        <HeaderLink name="Profile" href="/profile" visible={props.auth} />
+        <BtnSignIn name="Sign in" href="/login" visible={!props.auth} />
+        <BtnSignOut name="Sign out" href="/home" callback={props.callback} visible={props.auth} />
       </nav>
     </div>
   );

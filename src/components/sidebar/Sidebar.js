@@ -4,7 +4,7 @@ const Sidebar = () => {
   return (
     <div className="Sidebar">
       <Message type="Date" />
-      <Message type="Weather" />
+      <Message type="Time" />
     </div>
   );
 };
